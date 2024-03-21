@@ -1,0 +1,631 @@
+{
+    "errors": [
+      {
+        "code": 3,
+        "level": "warn",
+        "message": "Syntax error at line semgrep.json:1:\n missing element",
+        "path": "semgrep.json",
+        "type": "Syntax error"
+      },
+      {
+        "code": 3,
+        "level": "warn",
+        "message": "Syntax error at line .github/workflows/Semgrep-Mainline+Diff.yml:55:\n When parsing a snippet as Bash for metavariable-pattern in rule 'yaml.github-actions.security.curl-eval.curl-eval', `${{` was unexpected",
+        "path": ".github/workflows/Semgrep-Mainline+Diff.yml",
+        "spans": [
+          {
+            "end": {
+              "col": 27,
+              "line": 55,
+              "offset": 934
+            },
+            "file": ".github/workflows/Semgrep-Mainline+Diff.yml",
+            "start": {
+              "col": 24,
+              "line": 55,
+              "offset": 931
+            }
+          }
+        ],
+        "type": [
+          "PartialParsing",
+          [
+            {
+              "end": {
+                "col": 27,
+                "line": 55,
+                "offset": 934
+              },
+              "path": ".github/workflows/Semgrep-Mainline+Diff.yml",
+              "start": {
+                "col": 24,
+                "line": 55,
+                "offset": 931
+              }
+            }
+          ]
+        ]
+      }
+    ],
+    "interfile_languages_used": [],
+    "paths": {
+      "scanned": [
+        ".github/workflows/Semgrep-Mainline+Diff.yml",
+        "false-pos/Dockerfile",
+        "go.mod",
+        "kotlin/gradle.lockfile",
+        "rust/Cargo.lock",
+        "rust/Cargo.toml",
+        "rust/rcs/Cargo.lock",
+        "rust/rcs/Cargo.toml",
+        "semgrep.json"
+      ]
+    },
+    "results": [
+      {
+        "check_id": "ssc-parity-c73c0e70e6f866bb24616ebef33d0532e89a410b",
+        "end": {
+          "col": 0,
+          "line": 10,
+          "offset": 0
+        },
+        "extra": {
+          "engine_kind": "OSS",
+          "fingerprint": "4742adfdd53be28190ad43cd8baae22e48f2effd3cf7147dda797a01fd69f050caefa7d688e56370dd1864a6e4a355ec2316808f6416f1abfd3e40c756f6bb53_0",
+          "is_ignored": false,
+          "lines": "\tgolang.org/x/crypto v0.12.0",
+          "message": "golang.org/x/crypto < 0.17.0 is vulnerable to Insufficient Verification of Data Authenticity.",
+          "metadata": {
+            "category": "security",
+            "confidence": "LOW",
+            "cve": "CVE-2023-48795",
+            "cwe": [
+              "CWE-1357: Reliance on Uncontrolled Component",
+              "CWE-345: Insufficient Verification of Data Authenticity",
+              "CWE-354: Improper Validation of Integrity Check Value"
+            ],
+            "dev.semgrep.actions": [],
+            "ghsa": "GHSA-45x7-px36-x8w8",
+            "license": "Copyright 2023 Semgrep, Inc.",
+            "owasp": [
+              "A06:2021 - Vulnerable and Outdated Components",
+              "A08:2021 - Software and Data Integrity Failures"
+            ],
+            "publish-date": "2023-12-18T19:22:09Z",
+            "references": [
+              "https://nvd.nist.gov/vuln/detail/CVE-2023-48795",
+              "https://github.com/advisories/GHSA-45x7-px36-x8w8"
+            ],
+            "sca-fix-versions": [
+              {
+                "golang.org/x/crypto": "0.17.0"
+              }
+            ],
+            "sca-kind": "legacy",
+            "sca-schema": 20230302,
+            "sca-severity": "MODERATE",
+            "sca-vuln-database-identifier": "CVE-2023-48795",
+            "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-c73c0e70e6f866bb24616ebef33d0532e89a410b",
+            "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-c73c0e70e6f866bb24616ebef33d0532e89a410b",
+            "technology": [
+              "go"
+            ]
+          },
+          "metavars": {},
+          "sca_info": {
+            "dependency_match": {
+              "dependency_pattern": {
+                "ecosystem": "gomod",
+                "package": "golang.org/x/crypto",
+                "semver_range": ">=0, <0.17.0"
+              },
+              "found_dependency": {
+                "allowed_hashes": {},
+                "ecosystem": "gomod",
+                "line_number": 10,
+                "package": "golang.org/x/crypto",
+                "resolved_url": "golang.org/x/crypto",
+                "transitivity": "direct",
+                "version": "0.12.0"
+              },
+              "lockfile": "go.mod"
+            },
+            "reachability_rule": false,
+            "reachable": false,
+            "sca_finding_schema": 20220913
+          },
+          "severity": "WARNING"
+        },
+        "path": "go.mod",
+        "start": {
+          "col": 0,
+          "line": 10,
+          "offset": 0
+        }
+      },
+      {
+        "check_id": "ssc-parity-2934385d05a9c249866aaee1ee0f25a176e77b11",
+        "end": {
+          "col": 0,
+          "line": 4,
+          "offset": 0
+        },
+        "extra": {
+          "engine_kind": "OSS",
+          "fingerprint": "10a7823d71b7cfcd3a3680fc79c1d38a27d8e9674baec2326605064d6880ca886bb1c4d3489ea0cc6e46ef4fbfa82ae63c3bf3d592c083e28e139e3394357a44_0",
+          "is_ignored": false,
+          "lines": "org.jetbrains.kotlin:kotlin-stdlib:1.4.20.RELEASE=compileClasspath, runtimeClasspath",
+          "message": "org.jetbrains.kotlin:kotlin-stdlib <= 1.4.20 is vulnerable to Incorrect Default Permissions.",
+          "metadata": {
+            "category": "security",
+            "confidence": "LOW",
+            "cve": "CVE-2020-29582",
+            "cwe": [
+              "CWE-1357: Reliance on Uncontrolled Component",
+              "CWE-276: Incorrect Default Permissions"
+            ],
+            "dev.semgrep.actions": [],
+            "ghsa": "GHSA-cqj8-47ch-rvvq",
+            "license": "Copyright 2023 Semgrep, Inc.",
+            "owasp": [
+              "A06:2021 - Vulnerable and Outdated Components",
+              "A01:2021 - Broken Access Control"
+            ],
+            "publish-date": "2022-05-24T17:40:48Z",
+            "references": [
+              "https://nvd.nist.gov/vuln/detail/CVE-2020-29582",
+              "https://github.com/advisories/GHSA-cqj8-47ch-rvvq"
+            ],
+            "sca-fix-versions": [
+              {
+                "org.jetbrains.kotlin:kotlin-stdlib": "1.4.21"
+              }
+            ],
+            "sca-kind": "legacy",
+            "sca-schema": 20230302,
+            "sca-severity": "MODERATE",
+            "sca-vuln-database-identifier": "CVE-2020-29582",
+            "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-2934385d05a9c249866aaee1ee0f25a176e77b11",
+            "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-2934385d05a9c249866aaee1ee0f25a176e77b11",
+            "technology": [
+              "java"
+            ]
+          },
+          "metavars": {},
+          "sca_info": {
+            "dependency_match": {
+              "dependency_pattern": {
+                "ecosystem": "maven",
+                "package": "org.jetbrains.kotlin:kotlin-stdlib",
+                "semver_range": ">=0, <1.4.21"
+              },
+              "found_dependency": {
+                "allowed_hashes": {},
+                "ecosystem": "maven",
+                "line_number": 4,
+                "package": "org.jetbrains.kotlin:kotlin-stdlib",
+                "transitivity": "unknown",
+                "version": "1.4.20.RELEASE"
+              },
+              "lockfile": "kotlin/gradle.lockfile"
+            },
+            "reachability_rule": false,
+            "reachable": false,
+            "sca_finding_schema": 20220913
+          },
+          "severity": "WARNING"
+        },
+        "path": "kotlin/gradle.lockfile",
+        "start": {
+          "col": 0,
+          "line": 4,
+          "offset": 0
+        }
+      },
+      {
+        "check_id": "ssc-parity-895528c9bfca5835baebd40410a640e2a69bb790",
+        "end": {
+          "col": 0,
+          "line": 4,
+          "offset": 0
+        },
+        "extra": {
+          "engine_kind": "OSS",
+          "fingerprint": "aea22c737a541698f66cdb25be90c70054d31ced0ce31056de05d0b9a32fe2a1a069cdabc3aae1539e77ad4dcc435217599f68366b55357d204d3180981fa4f7_0",
+          "is_ignored": false,
+          "lines": "org.jetbrains.kotlin:kotlin-stdlib:1.4.20.RELEASE=compileClasspath, runtimeClasspath",
+          "message": "org.jetbrains.kotlin:kotlin-stdlib <= 1.5.32 is vulnerable to Improper Locking.",
+          "metadata": {
+            "category": "security",
+            "confidence": "LOW",
+            "cve": "CVE-2022-24329",
+            "cwe": [
+              "CWE-1357: Reliance on Uncontrolled Component",
+              "CWE-667: Improper Locking"
+            ],
+            "dev.semgrep.actions": [],
+            "ghsa": "GHSA-2qp4-g3q3-f92w",
+            "license": "Copyright 2023 Semgrep, Inc.",
+            "owasp": [
+              "A06:2021 - Vulnerable and Outdated Components"
+            ],
+            "publish-date": "2022-02-26T00:00:43Z",
+            "references": [
+              "https://nvd.nist.gov/vuln/detail/CVE-2022-24329",
+              "https://github.com/advisories/GHSA-2qp4-g3q3-f92w"
+            ],
+            "sca-fix-versions": [
+              {
+                "org.jetbrains.kotlin:kotlin-stdlib": "1.6.0"
+              }
+            ],
+            "sca-kind": "legacy",
+            "sca-schema": 20230302,
+            "sca-severity": "MODERATE",
+            "sca-vuln-database-identifier": "CVE-2022-24329",
+            "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-895528c9bfca5835baebd40410a640e2a69bb790",
+            "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-895528c9bfca5835baebd40410a640e2a69bb790",
+            "technology": [
+              "java"
+            ]
+          },
+          "metavars": {},
+          "sca_info": {
+            "dependency_match": {
+              "dependency_pattern": {
+                "ecosystem": "maven",
+                "package": "org.jetbrains.kotlin:kotlin-stdlib",
+                "semver_range": ">=0, <1.6.0"
+              },
+              "found_dependency": {
+                "allowed_hashes": {},
+                "ecosystem": "maven",
+                "line_number": 4,
+                "package": "org.jetbrains.kotlin:kotlin-stdlib",
+                "transitivity": "unknown",
+                "version": "1.4.20.RELEASE"
+              },
+              "lockfile": "kotlin/gradle.lockfile"
+            },
+            "reachability_rule": false,
+            "reachable": false,
+            "sca_finding_schema": 20220913
+          },
+          "severity": "WARNING"
+        },
+        "path": "kotlin/gradle.lockfile",
+        "start": {
+          "col": 0,
+          "line": 4,
+          "offset": 0
+        }
+      },
+      {
+        "check_id": "ssc-parity-1a4e6cb6491bd720a198522870186ed89d74a029",
+        "end": {
+          "col": 0,
+          "line": 0,
+          "offset": 0
+        },
+        "extra": {
+          "engine_kind": "OSS",
+          "fingerprint": "8c6b013e7c3a49d3d4d10635e25eff640e16efe96aa01b547dc0455d255a726df27cdcb974f1b3b2e7021e075b9e28c2e897cb81a0e94070d89c5d84faf1b7b6_0",
+          "is_ignored": false,
+          "lines": "",
+          "message": "Parsing borsh messages with ZST which are not-copy/clone is unsound",
+          "metadata": {
+            "category": "security",
+            "confidence": "LOW",
+            "cve": "",
+            "cwe": [
+              "CWE-1357: Reliance on Uncontrolled Component"
+            ],
+            "dev.semgrep.actions": [],
+            "ghsa": "GHSA-fjx5-qpf4-xjf2",
+            "license": "Copyright 2023 Semgrep, Inc.",
+            "owasp": [
+              "A06:2021 - Vulnerable and Outdated Components"
+            ],
+            "publish-date": "2023-04-17T16:32:26Z",
+            "references": [
+              "https://github.com/advisories/GHSA-fjx5-qpf4-xjf2"
+            ],
+            "sca-fix-versions": [
+              {
+                "borsh": "1.0.0-alpha.1"
+              }
+            ],
+            "sca-kind": "legacy",
+            "sca-schema": 20230302,
+            "sca-severity": "MODERATE",
+            "sca-vuln-database-identifier": "GHSA-fjx5-qpf4-xjf2",
+            "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-1a4e6cb6491bd720a198522870186ed89d74a029",
+            "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-1a4e6cb6491bd720a198522870186ed89d74a029",
+            "technology": [
+              "rust"
+            ]
+          },
+          "metavars": {},
+          "sca_info": {
+            "dependency_match": {
+              "dependency_pattern": {
+                "ecosystem": "cargo",
+                "package": "borsh",
+                "semver_range": ">=0, <1.0.0-alpha.1"
+              },
+              "found_dependency": {
+                "allowed_hashes": {
+                  "sha256": [
+                    "4114279215a005bc675e386011e594e1d9b800918cea18fcadadcce864a2046b"
+                  ]
+                },
+                "ecosystem": "cargo",
+                "package": "borsh",
+                "transitivity": "unknown",
+                "version": "0.10.3"
+              },
+              "lockfile": "rust/Cargo.lock"
+            },
+            "reachability_rule": false,
+            "reachable": false,
+            "sca_finding_schema": 20220913
+          },
+          "severity": "WARNING"
+        },
+        "path": "rust/Cargo.lock",
+        "start": {
+          "col": 0,
+          "line": 0,
+          "offset": 0
+        }
+      },
+      {
+        "check_id": "ssc-parity-434da875f041582bde86f78e21318bb10f13e851",
+        "end": {
+          "col": 0,
+          "line": 0,
+          "offset": 0
+        },
+        "extra": {
+          "engine_kind": "OSS",
+          "fingerprint": "1d12f93c73fbbe48c4be7a7bcc6d92fcceffceb18a5840bc9145ddd6fe7b5dde903a23bfe7cc11228ab6da19f564b128762e98cff27366d2a53f24a5fbbf357f_0",
+          "is_ignored": false,
+          "lines": "",
+          "message": "`openssl` `X509StoreRef::objects` is unsound",
+          "metadata": {
+            "category": "security",
+            "confidence": "LOW",
+            "cve": "",
+            "cwe": [
+              "CWE-1357: Reliance on Uncontrolled Component"
+            ],
+            "dev.semgrep.actions": [],
+            "ghsa": "GHSA-xphf-cx8h-7q9g",
+            "license": "Copyright 2023 Semgrep, Inc.",
+            "owasp": [
+              "A06:2021 - Vulnerable and Outdated Components"
+            ],
+            "publish-date": "2023-11-28T20:51:08Z",
+            "references": [
+              "https://github.com/advisories/GHSA-xphf-cx8h-7q9g"
+            ],
+            "sca-fix-versions": [
+              {
+                "openssl": "0.10.60"
+              }
+            ],
+            "sca-kind": "legacy",
+            "sca-schema": 20230302,
+            "sca-severity": "MODERATE",
+            "sca-vuln-database-identifier": "GHSA-xphf-cx8h-7q9g",
+            "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-434da875f041582bde86f78e21318bb10f13e851",
+            "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-434da875f041582bde86f78e21318bb10f13e851",
+            "technology": [
+              "rust"
+            ]
+          },
+          "metavars": {},
+          "sca_info": {
+            "dependency_match": {
+              "dependency_pattern": {
+                "ecosystem": "cargo",
+                "package": "openssl",
+                "semver_range": ">=0.10.29, <0.10.60"
+              },
+              "found_dependency": {
+                "allowed_hashes": {
+                  "sha256": [
+                    "bac25ee399abb46215765b1cb35bc0212377e58a061560d8b29b024fd0430e7c"
+                  ]
+                },
+                "ecosystem": "cargo",
+                "package": "openssl",
+                "transitivity": "unknown",
+                "version": "0.10.57"
+              },
+              "lockfile": "rust/Cargo.lock"
+            },
+            "reachability_rule": false,
+            "reachable": false,
+            "sca_finding_schema": 20220913
+          },
+          "severity": "WARNING"
+        },
+        "path": "rust/Cargo.lock",
+        "start": {
+          "col": 0,
+          "line": 0,
+          "offset": 0
+        }
+      },
+      {
+        "check_id": "ssc-parity-b93b0f66610eaeeeea7bf478efc687d7932ae899",
+        "end": {
+          "col": 0,
+          "line": 0,
+          "offset": 0
+        },
+        "extra": {
+          "engine_kind": "OSS",
+          "fingerprint": "98a93facd96960d32085ee0cc00f11875bc1d0f78bb89608062ee09f6bb212dc0039db6eb61fe165ded650e1ab38d588014596dcb9e7bfaa127598841a08d762_0",
+          "is_ignored": false,
+          "lines": "",
+          "message": "rustix's `rustix::fs::Dir` iterator with the `linux_raw` backend can cause memory explosion",
+          "metadata": {
+            "category": "security",
+            "confidence": "LOW",
+            "cve": "",
+            "cwe": [
+              "CWE-1357: Reliance on Uncontrolled Component"
+            ],
+            "dev.semgrep.actions": [],
+            "ghsa": "GHSA-c827-hfw6-qwvm",
+            "license": "Copyright 2023 Semgrep, Inc.",
+            "owasp": [
+              "A06:2021 - Vulnerable and Outdated Components"
+            ],
+            "publish-date": "2023-10-18T18:27:47Z",
+            "references": [
+              "https://github.com/advisories/GHSA-c827-hfw6-qwvm"
+            ],
+            "sca-fix-versions": [
+              {
+                "rustix": "0.35.15"
+              },
+              {
+                "rustix": "0.36.16"
+              },
+              {
+                "rustix": "0.37.25"
+              },
+              {
+                "rustix": "0.38.19"
+              }
+            ],
+            "sca-kind": "legacy",
+            "sca-schema": 20230302,
+            "sca-severity": "MODERATE",
+            "sca-vuln-database-identifier": "GHSA-c827-hfw6-qwvm",
+            "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-b93b0f66610eaeeeea7bf478efc687d7932ae899",
+            "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-b93b0f66610eaeeeea7bf478efc687d7932ae899",
+            "technology": [
+              "rust"
+            ]
+          },
+          "metavars": {},
+          "sca_info": {
+            "dependency_match": {
+              "dependency_pattern": {
+                "ecosystem": "cargo",
+                "package": "rustix",
+                "semver_range": ">=0.38.0, <0.38.19"
+              },
+              "found_dependency": {
+                "allowed_hashes": {
+                  "sha256": [
+                    "c0c3dde1fc030af041adc40e79c0e7fbcf431dd24870053d187d7c66e4b87453"
+                  ]
+                },
+                "ecosystem": "cargo",
+                "package": "rustix",
+                "transitivity": "unknown",
+                "version": "0.38.11"
+              },
+              "lockfile": "rust/Cargo.lock"
+            },
+            "reachability_rule": false,
+            "reachable": false,
+            "sca_finding_schema": 20220913
+          },
+          "severity": "WARNING"
+        },
+        "path": "rust/Cargo.lock",
+        "start": {
+          "col": 0,
+          "line": 0,
+          "offset": 0
+        }
+      },
+      {
+        "check_id": "ssc-parity-bd0e49ebde4e54e1c873a1040690986fb1dc0cf3",
+        "end": {
+          "col": 0,
+          "line": 0,
+          "offset": 0
+        },
+        "extra": {
+          "engine_kind": "OSS",
+          "fingerprint": "4588ea99771e882df7abf6cede8fe10182ea629f0aa2059a60aac32c317582871fad29f11eb789a3b6d19b9f035ee26fa0118ba1b387c25bbe7cd78b71f57265_0",
+          "is_ignored": false,
+          "lines": "",
+          "message": "unsafe-libyaml unaligned write of u64 on 32-bit and 16-bit platforms",
+          "metadata": {
+            "category": "security",
+            "confidence": "LOW",
+            "cve": "",
+            "cwe": [
+              "CWE-1357: Reliance on Uncontrolled Component"
+            ],
+            "dev.semgrep.actions": [],
+            "ghsa": "GHSA-r24f-hg58-vfrw",
+            "license": "Copyright 2023 Semgrep, Inc.",
+            "owasp": [
+              "A06:2021 - Vulnerable and Outdated Components"
+            ],
+            "publish-date": "2023-12-21T18:14:34Z",
+            "references": [
+              "https://github.com/advisories/GHSA-r24f-hg58-vfrw"
+            ],
+            "sca-fix-versions": [
+              {
+                "unsafe-libyaml": "0.2.10"
+              }
+            ],
+            "sca-kind": "legacy",
+            "sca-schema": 20230302,
+            "sca-severity": "MODERATE",
+            "sca-vuln-database-identifier": "GHSA-r24f-hg58-vfrw",
+            "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-bd0e49ebde4e54e1c873a1040690986fb1dc0cf3",
+            "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-bd0e49ebde4e54e1c873a1040690986fb1dc0cf3",
+            "technology": [
+              "rust"
+            ]
+          },
+          "metavars": {},
+          "sca_info": {
+            "dependency_match": {
+              "dependency_pattern": {
+                "ecosystem": "cargo",
+                "package": "unsafe-libyaml",
+                "semver_range": ">=0, <0.2.10"
+              },
+              "found_dependency": {
+                "allowed_hashes": {
+                  "sha256": [
+                    "f28467d3e1d3c6586d8f25fa243f544f5800fec42d97032474e17222c2b75cfa"
+                  ]
+                },
+                "ecosystem": "cargo",
+                "package": "unsafe-libyaml",
+                "transitivity": "unknown",
+                "version": "0.2.9"
+              },
+              "lockfile": "rust/Cargo.lock"
+            },
+            "reachability_rule": false,
+            "reachable": false,
+            "sca_finding_schema": 20220913
+          },
+          "severity": "WARNING"
+        },
+        "path": "rust/Cargo.lock",
+        "start": {
+          "col": 0,
+          "line": 0,
+          "offset": 0
+        }
+      }
+    ],
+    "skipped_rules": [],
+    "version": "1.61.1"
+  }

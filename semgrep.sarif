@@ -1,0 +1,429 @@
+{
+    "$schema": "https://docs.oasis-open.org/sarif/sarif/v2.1.0/os/schemas/sarif-schema-2.1.0.json",
+    "runs": [
+        {
+            "invocations": [
+                {
+                    "executionSuccessful": true,
+                    "toolExecutionNotifications": []
+                }
+            ],
+            "results": [
+                {
+                    "fingerprints": {
+                        "matchBasedId/v1": "4742adfdd53be28190ad43cd8baae22e48f2effd3cf7147dda797a01fd69f050caefa7d688e56370dd1864a6e4a355ec2316808f6416f1abfd3e40c756f6bb53_0"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "go.mod",
+                                    "uriBaseId": "%SRCROOT%"
+                                },
+                                "region": {
+                                    "endColumn": 1,
+                                    "endLine": 10,
+                                    "snippet": {
+                                        "text": "\tgolang.org/x/crypto v0.12.0"
+                                    },
+                                    "startColumn": 1,
+                                    "startLine": 10
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "golang.org/x/crypto < 0.17.0 is vulnerable to Insufficient Verification of Data Authenticity."
+                    },
+                    "properties": {},
+                    "ruleId": "ssc-parity-c73c0e70e6f866bb24616ebef33d0532e89a410b"
+                },
+                {
+                    "fingerprints": {
+                        "matchBasedId/v1": "10a7823d71b7cfcd3a3680fc79c1d38a27d8e9674baec2326605064d6880ca886bb1c4d3489ea0cc6e46ef4fbfa82ae63c3bf3d592c083e28e139e3394357a44_0"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "kotlin/gradle.lockfile",
+                                    "uriBaseId": "%SRCROOT%"
+                                },
+                                "region": {
+                                    "endColumn": 1,
+                                    "endLine": 4,
+                                    "snippet": {
+                                        "text": "org.jetbrains.kotlin:kotlin-stdlib:1.4.20.RELEASE=compileClasspath, runtimeClasspath"
+                                    },
+                                    "startColumn": 1,
+                                    "startLine": 4
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "org.jetbrains.kotlin:kotlin-stdlib <= 1.4.20 is vulnerable to Incorrect Default Permissions."
+                    },
+                    "properties": {},
+                    "ruleId": "ssc-parity-2934385d05a9c249866aaee1ee0f25a176e77b11"
+                },
+                {
+                    "fingerprints": {
+                        "matchBasedId/v1": "aea22c737a541698f66cdb25be90c70054d31ced0ce31056de05d0b9a32fe2a1a069cdabc3aae1539e77ad4dcc435217599f68366b55357d204d3180981fa4f7_0"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "kotlin/gradle.lockfile",
+                                    "uriBaseId": "%SRCROOT%"
+                                },
+                                "region": {
+                                    "endColumn": 1,
+                                    "endLine": 4,
+                                    "snippet": {
+                                        "text": "org.jetbrains.kotlin:kotlin-stdlib:1.4.20.RELEASE=compileClasspath, runtimeClasspath"
+                                    },
+                                    "startColumn": 1,
+                                    "startLine": 4
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "org.jetbrains.kotlin:kotlin-stdlib <= 1.5.32 is vulnerable to Improper Locking."
+                    },
+                    "properties": {},
+                    "ruleId": "ssc-parity-895528c9bfca5835baebd40410a640e2a69bb790"
+                },
+                {
+                    "fingerprints": {
+                        "matchBasedId/v1": "8c6b013e7c3a49d3d4d10635e25eff640e16efe96aa01b547dc0455d255a726df27cdcb974f1b3b2e7021e075b9e28c2e897cb81a0e94070d89c5d84faf1b7b6_0"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "rust/Cargo.lock",
+                                    "uriBaseId": "%SRCROOT%"
+                                },
+                                "region": {
+                                    "endColumn": 1,
+                                    "endLine": 0,
+                                    "snippet": {
+                                        "text": ""
+                                    },
+                                    "startColumn": 1,
+                                    "startLine": 0
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "Parsing borsh messages with ZST which are not-copy/clone is unsound"
+                    },
+                    "properties": {},
+                    "ruleId": "ssc-parity-1a4e6cb6491bd720a198522870186ed89d74a029"
+                },
+                {
+                    "fingerprints": {
+                        "matchBasedId/v1": "1d12f93c73fbbe48c4be7a7bcc6d92fcceffceb18a5840bc9145ddd6fe7b5dde903a23bfe7cc11228ab6da19f564b128762e98cff27366d2a53f24a5fbbf357f_0"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "rust/Cargo.lock",
+                                    "uriBaseId": "%SRCROOT%"
+                                },
+                                "region": {
+                                    "endColumn": 1,
+                                    "endLine": 0,
+                                    "snippet": {
+                                        "text": ""
+                                    },
+                                    "startColumn": 1,
+                                    "startLine": 0
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "`openssl` `X509StoreRef::objects` is unsound"
+                    },
+                    "properties": {},
+                    "ruleId": "ssc-parity-434da875f041582bde86f78e21318bb10f13e851"
+                },
+                {
+                    "fingerprints": {
+                        "matchBasedId/v1": "98a93facd96960d32085ee0cc00f11875bc1d0f78bb89608062ee09f6bb212dc0039db6eb61fe165ded650e1ab38d588014596dcb9e7bfaa127598841a08d762_0"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "rust/Cargo.lock",
+                                    "uriBaseId": "%SRCROOT%"
+                                },
+                                "region": {
+                                    "endColumn": 1,
+                                    "endLine": 0,
+                                    "snippet": {
+                                        "text": ""
+                                    },
+                                    "startColumn": 1,
+                                    "startLine": 0
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "rustix's `rustix::fs::Dir` iterator with the `linux_raw` backend can cause memory explosion"
+                    },
+                    "properties": {},
+                    "ruleId": "ssc-parity-b93b0f66610eaeeeea7bf478efc687d7932ae899"
+                },
+                {
+                    "fingerprints": {
+                        "matchBasedId/v1": "4588ea99771e882df7abf6cede8fe10182ea629f0aa2059a60aac32c317582871fad29f11eb789a3b6d19b9f035ee26fa0118ba1b387c25bbe7cd78b71f57265_0"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "rust/Cargo.lock",
+                                    "uriBaseId": "%SRCROOT%"
+                                },
+                                "region": {
+                                    "endColumn": 1,
+                                    "endLine": 0,
+                                    "snippet": {
+                                        "text": ""
+                                    },
+                                    "startColumn": 1,
+                                    "startLine": 0
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "unsafe-libyaml unaligned write of u64 on 32-bit and 16-bit platforms"
+                    },
+                    "properties": {},
+                    "ruleId": "ssc-parity-bd0e49ebde4e54e1c873a1040690986fb1dc0cf3"
+                }
+            ],
+            "tool": {
+                "driver": {
+                    "name": "Semgrep Pro",
+                    "rules": [
+                        {
+                            "defaultConfiguration": {
+                                "level": "warning"
+                            },
+                            "fullDescription": {
+                                "text": "org.jetbrains.kotlin:kotlin-stdlib <= 1.5.32 is vulnerable to Improper Locking."
+                            },
+                            "help": {
+                                "markdown": "org.jetbrains.kotlin:kotlin-stdlib <= 1.5.32 is vulnerable to Improper Locking.\n\n<b>References:</b>\n - [Semgrep Rule](https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-895528c9bfca5835baebd40410a640e2a69bb790)\n - [https://nvd.nist.gov/vuln/detail/CVE-2022-24329](https://nvd.nist.gov/vuln/detail/CVE-2022-24329)\n - [https://github.com/advisories/GHSA-2qp4-g3q3-f92w](https://github.com/advisories/GHSA-2qp4-g3q3-f92w)\n",
+                                "text": "org.jetbrains.kotlin:kotlin-stdlib <= 1.5.32 is vulnerable to Improper Locking."
+                            },
+                            "helpUri": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-895528c9bfca5835baebd40410a640e2a69bb790",
+                            "id": "ssc-parity-895528c9bfca5835baebd40410a640e2a69bb790",
+                            "name": "ssc-parity-895528c9bfca5835baebd40410a640e2a69bb790",
+                            "properties": {
+                                "precision": "medium",
+                                "tags": [
+                                    "CWE-1357: Reliance on Uncontrolled Component",
+                                    "CWE-667: Improper Locking",
+                                    "A06:2021 - Vulnerable and Outdated Components",
+                                    "LOW confidence",
+                                    "security"
+                                ],
+                                "security-severity": "6.0"
+                            },
+                            "shortDescription": {
+                                "text": "[Semgrep Supply Chain] Reliance on Uncontrolled Component in org.jetbrains.kotlin:kotlin-stdlib (>=0, <1.6.0)"
+                            }
+                        },
+                        {
+                            "defaultConfiguration": {
+                                "level": "warning"
+                            },
+                            "fullDescription": {
+                                "text": "Parsing borsh messages with ZST which are not-copy/clone is unsound"
+                            },
+                            "help": {
+                                "markdown": "Parsing borsh messages with ZST which are not-copy/clone is unsound\n\n<b>References:</b>\n - [Semgrep Rule](https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-1a4e6cb6491bd720a198522870186ed89d74a029)\n - [https://github.com/advisories/GHSA-fjx5-qpf4-xjf2](https://github.com/advisories/GHSA-fjx5-qpf4-xjf2)\n",
+                                "text": "Parsing borsh messages with ZST which are not-copy/clone is unsound"
+                            },
+                            "helpUri": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-1a4e6cb6491bd720a198522870186ed89d74a029",
+                            "id": "ssc-parity-1a4e6cb6491bd720a198522870186ed89d74a029",
+                            "name": "ssc-parity-1a4e6cb6491bd720a198522870186ed89d74a029",
+                            "properties": {
+                                "precision": "medium",
+                                "tags": [
+                                    "CWE-1357: Reliance on Uncontrolled Component",
+                                    "A06:2021 - Vulnerable and Outdated Components",
+                                    "LOW confidence",
+                                    "security"
+                                ],
+                                "security-severity": "6.0"
+                            },
+                            "shortDescription": {
+                                "text": "[Semgrep Supply Chain] Reliance on Uncontrolled Component in borsh (>=0, <1.0.0-alpha.1)"
+                            }
+                        },
+                        {
+                            "defaultConfiguration": {
+                                "level": "warning"
+                            },
+                            "fullDescription": {
+                                "text": "org.jetbrains.kotlin:kotlin-stdlib <= 1.4.20 is vulnerable to Incorrect Default Permissions."
+                            },
+                            "help": {
+                                "markdown": "org.jetbrains.kotlin:kotlin-stdlib <= 1.4.20 is vulnerable to Incorrect Default Permissions.\n\n<b>References:</b>\n - [Semgrep Rule](https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-2934385d05a9c249866aaee1ee0f25a176e77b11)\n - [https://nvd.nist.gov/vuln/detail/CVE-2020-29582](https://nvd.nist.gov/vuln/detail/CVE-2020-29582)\n - [https://github.com/advisories/GHSA-cqj8-47ch-rvvq](https://github.com/advisories/GHSA-cqj8-47ch-rvvq)\n",
+                                "text": "org.jetbrains.kotlin:kotlin-stdlib <= 1.4.20 is vulnerable to Incorrect Default Permissions."
+                            },
+                            "helpUri": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-2934385d05a9c249866aaee1ee0f25a176e77b11",
+                            "id": "ssc-parity-2934385d05a9c249866aaee1ee0f25a176e77b11",
+                            "name": "ssc-parity-2934385d05a9c249866aaee1ee0f25a176e77b11",
+                            "properties": {
+                                "precision": "medium",
+                                "tags": [
+                                    "CWE-1357: Reliance on Uncontrolled Component",
+                                    "CWE-276: Incorrect Default Permissions",
+                                    "A06:2021 - Vulnerable and Outdated Components",
+                                    "A01:2021 - Broken Access Control",
+                                    "LOW confidence",
+                                    "security"
+                                ],
+                                "security-severity": "6.0"
+                            },
+                            "shortDescription": {
+                                "text": "[Semgrep Supply Chain] Reliance on Uncontrolled Component in org.jetbrains.kotlin:kotlin-stdlib (>=0, <1.4.21)"
+                            }
+                        },
+                        {
+                            "defaultConfiguration": {
+                                "level": "warning"
+                            },
+                            "fullDescription": {
+                                "text": "`openssl` `X509StoreRef::objects` is unsound"
+                            },
+                            "help": {
+                                "markdown": "`openssl` `X509StoreRef::objects` is unsound\n\n<b>References:</b>\n - [Semgrep Rule](https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-434da875f041582bde86f78e21318bb10f13e851)\n - [https://github.com/advisories/GHSA-xphf-cx8h-7q9g](https://github.com/advisories/GHSA-xphf-cx8h-7q9g)\n",
+                                "text": "`openssl` `X509StoreRef::objects` is unsound"
+                            },
+                            "helpUri": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-434da875f041582bde86f78e21318bb10f13e851",
+                            "id": "ssc-parity-434da875f041582bde86f78e21318bb10f13e851",
+                            "name": "ssc-parity-434da875f041582bde86f78e21318bb10f13e851",
+                            "properties": {
+                                "precision": "medium",
+                                "tags": [
+                                    "CWE-1357: Reliance on Uncontrolled Component",
+                                    "A06:2021 - Vulnerable and Outdated Components",
+                                    "LOW confidence",
+                                    "security"
+                                ],
+                                "security-severity": "6.0"
+                            },
+                            "shortDescription": {
+                                "text": "[Semgrep Supply Chain] Reliance on Uncontrolled Component in openssl (>=0.10.29, <0.10.60)"
+                            }
+                        },
+                        {
+                            "defaultConfiguration": {
+                                "level": "warning"
+                            },
+                            "fullDescription": {
+                                "text": "golang.org/x/crypto < 0.17.0 is vulnerable to Insufficient Verification of Data Authenticity."
+                            },
+                            "help": {
+                                "markdown": "golang.org/x/crypto < 0.17.0 is vulnerable to Insufficient Verification of Data Authenticity.\n\n<b>References:</b>\n - [Semgrep Rule](https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-c73c0e70e6f866bb24616ebef33d0532e89a410b)\n - [https://nvd.nist.gov/vuln/detail/CVE-2023-48795](https://nvd.nist.gov/vuln/detail/CVE-2023-48795)\n - [https://github.com/advisories/GHSA-45x7-px36-x8w8](https://github.com/advisories/GHSA-45x7-px36-x8w8)\n",
+                                "text": "golang.org/x/crypto < 0.17.0 is vulnerable to Insufficient Verification of Data Authenticity."
+                            },
+                            "helpUri": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-c73c0e70e6f866bb24616ebef33d0532e89a410b",
+                            "id": "ssc-parity-c73c0e70e6f866bb24616ebef33d0532e89a410b",
+                            "name": "ssc-parity-c73c0e70e6f866bb24616ebef33d0532e89a410b",
+                            "properties": {
+                                "precision": "medium",
+                                "tags": [
+                                    "CWE-1357: Reliance on Uncontrolled Component",
+                                    "CWE-345: Insufficient Verification of Data Authenticity",
+                                    "CWE-354: Improper Validation of Integrity Check Value",
+                                    "A06:2021 - Vulnerable and Outdated Components",
+                                    "A08:2021 - Software and Data Integrity Failures",
+                                    "LOW confidence",
+                                    "security"
+                                ],
+                                "security-severity": "6.0"
+                            },
+                            "shortDescription": {
+                                "text": "[Semgrep Supply Chain] Reliance on Uncontrolled Component in golang.org/x/crypto (>=0, <0.17.0)"
+                            }
+                        },
+                        {
+                            "defaultConfiguration": {
+                                "level": "warning"
+                            },
+                            "fullDescription": {
+                                "text": "unsafe-libyaml unaligned write of u64 on 32-bit and 16-bit platforms"
+                            },
+                            "help": {
+                                "markdown": "unsafe-libyaml unaligned write of u64 on 32-bit and 16-bit platforms\n\n<b>References:</b>\n - [Semgrep Rule](https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-bd0e49ebde4e54e1c873a1040690986fb1dc0cf3)\n - [https://github.com/advisories/GHSA-r24f-hg58-vfrw](https://github.com/advisories/GHSA-r24f-hg58-vfrw)\n",
+                                "text": "unsafe-libyaml unaligned write of u64 on 32-bit and 16-bit platforms"
+                            },
+                            "helpUri": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-bd0e49ebde4e54e1c873a1040690986fb1dc0cf3",
+                            "id": "ssc-parity-bd0e49ebde4e54e1c873a1040690986fb1dc0cf3",
+                            "name": "ssc-parity-bd0e49ebde4e54e1c873a1040690986fb1dc0cf3",
+                            "properties": {
+                                "precision": "medium",
+                                "tags": [
+                                    "CWE-1357: Reliance on Uncontrolled Component",
+                                    "A06:2021 - Vulnerable and Outdated Components",
+                                    "LOW confidence",
+                                    "security"
+                                ],
+                                "security-severity": "6.0"
+                            },
+                            "shortDescription": {
+                                "text": "[Semgrep Supply Chain] Reliance on Uncontrolled Component in unsafe-libyaml (>=0, <0.2.10)"
+                            }
+                        },
+                        {
+                            "defaultConfiguration": {
+                                "level": "warning"
+                            },
+                            "fullDescription": {
+                                "text": "rustix's `rustix::fs::Dir` iterator with the `linux_raw` backend can cause memory explosion"
+                            },
+                            "help": {
+                                "markdown": "rustix's `rustix::fs::Dir` iterator with the `linux_raw` backend can cause memory explosion\n\n<b>References:</b>\n - [Semgrep Rule](https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-b93b0f66610eaeeeea7bf478efc687d7932ae899)\n - [https://github.com/advisories/GHSA-c827-hfw6-qwvm](https://github.com/advisories/GHSA-c827-hfw6-qwvm)\n",
+                                "text": "rustix's `rustix::fs::Dir` iterator with the `linux_raw` backend can cause memory explosion"
+                            },
+                            "helpUri": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-b93b0f66610eaeeeea7bf478efc687d7932ae899",
+                            "id": "ssc-parity-b93b0f66610eaeeeea7bf478efc687d7932ae899",
+                            "name": "ssc-parity-b93b0f66610eaeeeea7bf478efc687d7932ae899",
+                            "properties": {
+                                "precision": "medium",
+                                "tags": [
+                                    "CWE-1357: Reliance on Uncontrolled Component",
+                                    "A06:2021 - Vulnerable and Outdated Components",
+                                    "LOW confidence",
+                                    "security"
+                                ],
+                                "security-severity": "6.0"
+                            },
+                            "shortDescription": {
+                                "text": "[Semgrep Supply Chain] Reliance on Uncontrolled Component in rustix (>=0.38.0, <0.38.19)"
+                            }
+                        }
+                    ],
+                    "semanticVersion": "1.61.1"
+                }
+            }
+        }
+    ],
+    "version": "2.1.0"
+}
