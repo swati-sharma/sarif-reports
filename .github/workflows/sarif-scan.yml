@@ -1,0 +1,26 @@
+
+name: upload sarif report
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+jobs:
+  sec:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      # Your steps to generate the SARIF file go here
+
+      - name: List files in current directory
+        run: ls -la
+
+      - name: Check SARIF file size
+        run: du -h semgrep.sarif
+      
+      - name: Upload SARIF file
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: semgrep.sarif
