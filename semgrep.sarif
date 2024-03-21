@@ -109,12 +109,12 @@
                                 },
                                 "region": {
                                     "endColumn": 1,
-                                    "endLine": 0,
+                                    "endLine": 1,
                                     "snippet": {
                                         "text": ""
                                     },
                                     "startColumn": 1,
-                                    "startLine": 0
+                                    "startLine": 1
                                 }
                             }
                         }
@@ -138,12 +138,12 @@
                                 },
                                 "region": {
                                     "endColumn": 1,
-                                    "endLine": 0,
+                                    "endLine": 1,
                                     "snippet": {
                                         "text": ""
                                     },
                                     "startColumn": 1,
-                                    "startLine": 0
+                                    "startLine": 1
                                 }
                             }
                         }
@@ -167,12 +167,12 @@
                                 },
                                 "region": {
                                     "endColumn": 1,
-                                    "endLine": 0,
+                                    "endLine": 1,
                                     "snippet": {
                                         "text": ""
                                     },
                                     "startColumn": 1,
-                                    "startLine": 0
+                                    "startLine": 1
                                 }
                             }
                         }
@@ -196,12 +196,12 @@
                                 },
                                 "region": {
                                     "endColumn": 1,
-                                    "endLine": 0,
+                                    "endLine": 1,
                                     "snippet": {
                                         "text": ""
                                     },
                                     "startColumn": 1,
-                                    "startLine": 0
+                                    "startLine": 1
                                 }
                             }
                         }
