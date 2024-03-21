@@ -31,12 +31,12 @@
                                     "uriBaseId": "%SRCROOT%"
                                 },
                                 "region": {
-                                    "endColumn": 0,
+                                    "endColumn": 1,
                                     "endLine": 10,
                                     "snippet": {
                                         "text": "\tgolang.org/x/crypto v0.12.0"
                                     },
-                                    "startColumn": 0,
+                                    "startColumn": 1,
                                     "startLine": 10
                                 }
                             }
@@ -62,12 +62,12 @@
                                     "uriBaseId": "%SRCROOT%"
                                 },
                                 "region": {
-                                    "endColumn": 0,
+                                    "endColumn": 1,
                                     "endLine": 4,
                                     "snippet": {
                                         "text": "org.jetbrains.kotlin:kotlin-stdlib:1.4.20.RELEASE=compileClasspath, runtimeClasspath"
                                     },
-                                    "startColumn": 0,
+                                    "startColumn": 1,
                                     "startLine": 4
                                 }
                             }
@@ -93,12 +93,12 @@
                                     "uriBaseId": "%SRCROOT%"
                                 },
                                 "region": {
-                                    "endColumn": 0,
+                                    "endColumn": 1,
                                     "endLine": 4,
                                     "snippet": {
                                         "text": "org.jetbrains.kotlin:kotlin-stdlib:1.4.20.RELEASE=compileClasspath, runtimeClasspath"
                                     },
-                                    "startColumn": 0,
+                                    "startColumn": 1,
                                     "startLine": 4
                                 }
                             }
@@ -124,12 +124,12 @@
                                     "uriBaseId": "%SRCROOT%"
                                 },
                                 "region": {
-                                    "endColumn": 0,
+                                    "endColumn": 1,
                                     "endLine": 1,
                                     "snippet": {
                                         "text": ""
                                     },
-                                    "startColumn": 0,
+                                    "startColumn": 1,
                                     "startLine": 1
                                 }
                             }
@@ -155,12 +155,12 @@
                                     "uriBaseId": "%SRCROOT%"
                                 },
                                 "region": {
-                                    "endColumn": 0,
+                                    "endColumn": 1,
                                     "endLine": 1,
                                     "snippet": {
                                         "text": ""
                                     },
-                                    "startColumn": 0,
+                                    "startColumn": 1,
                                     "startLine": 1
                                 }
                             }
@@ -186,12 +186,12 @@
                                     "uriBaseId": "%SRCROOT%"
                                 },
                                 "region": {
-                                    "endColumn": 0,
+                                    "endColumn": 1,
                                     "endLine": 1,
                                     "snippet": {
                                         "text": ""
                                     },
-                                    "startColumn": 0,
+                                    "startColumn": 1,
                                     "startLine": 1
                                 }
                             }
@@ -217,12 +217,12 @@
                                     "uriBaseId": "%SRCROOT%"
                                 },
                                 "region": {
-                                    "endColumn": 0,
+                                    "endColumn": 1,
                                     "endLine": 1,
                                     "snippet": {
                                         "text": ""
                                     },
-                                    "startColumn": 0,
+                                    "startColumn": 1,
                                     "startLine": 1
                                 }
                             }
