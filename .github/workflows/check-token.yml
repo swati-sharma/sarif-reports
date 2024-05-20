@@ -1,6 +1,6 @@
 name: Semgrep Diagnostic Workflow
 
-on: {}
+on: [push]
 
 jobs:
   semgrep_access_check:
