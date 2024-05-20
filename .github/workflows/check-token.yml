@@ -1,0 +1,17 @@
+name: Semgrep Diagnostic Workflow
+
+on: {}
+
+jobs:
+  semgrep_access_check:
+    name: Check SEMGREP_APP_TOKEN and Run Semgrep Diagnostic
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check SEMGREP_APP_TOKEN availability
+      run: |
+        if [ -z "${{ secrets.SEMGREP_TOKEN }}" ]; then
+          echo "SEMGREP_APP_TOKEN is not set or accessible"
+          exit 1
+        else
+          echo "SEMGREP_APP_TOKEN is accessible"
+        fi
