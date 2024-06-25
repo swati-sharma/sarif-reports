@@ -36,8 +36,9 @@ def finding_to_sarif_result(finding):
 def finding_to_help_markdown_references(finding):
     references = ""
     references += f"\n - [Semgrep Rule]({finding['extra']['metadata']['source']})"
-    for ref in finding['extra']['metadata']['references']:
-        references += f"\n - [{ref}]({ref})"
+    if 'references' in finding['extra']['metadata']:
+        for ref in finding['extra']['metadata']['references']:
+            references += f"\n - [{ref}]({ref})"
     return f"{references}\n"
 
 def finding_to_driver_rule_help_markdown(finding):
@@ -198,7 +199,7 @@ def include_in_sarif(finding):
     if (finding['check_id'].startswith('ssc')):
         return finding['extra']['sca_info']['reachable'] # if ssc reachable
     else:
-        return ('monitor' not in finding['extra']['metadata']['dev.semgrep.actions']) # not configured for monitor
+        return ('monitor' not in finding['extra']['metadata']['dev.semgrep.actions']) # code or secrets finding configured to comment / block
 
 def filter_findings_results(findings):
     # Only post rules in comment and block
@@ -210,6 +211,7 @@ def load_findings(findings_file):
         return json.load(f)
 
 def main():
+    
     # Set up argument parsing
     parser = argparse.ArgumentParser(description='Generate a SARIF report from Semgrep\'s JSON output.')
     # Add arguments for SARIF file and output file name
@@ -218,16 +220,17 @@ def main():
 
     # Parse the command-line arguments
     args = parser.parse_args()
+    print(f"\nTransforming Semgrep JSON {args.json} to SARIF {args.sarif}... ")
 
     # Load findings from the specified file
     findings = load_findings(args.json)
-    # print(findings)
     # findings['results'] = filter_findings_results(findings)
-    print(findings['results'])
     sarif = build_sarif_template()
     sarif['runs'] = build_sarif_runs(findings)
 
     write_sarif_file(sarif, args.sarif)
+    
+    print(f"{args.sarif} written.  {args.json} transform complete.")
 
 if __name__ == '__main__':
     main()
