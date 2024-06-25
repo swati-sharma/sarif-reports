@@ -19,7 +19,9 @@ jobs:
 
       - name: List files in current directory
         run: ls -la
-
+      - name: Generate SARIF report
+        run: |
+          python3 build_sarif_from_json.py -j semgrep.json -s semgrep.sarif
       - name: Check SARIF file size
         run: du -h semgrep.sarif
       
